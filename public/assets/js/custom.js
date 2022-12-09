@@ -866,7 +866,6 @@ POTENZA.navactivation = function () {
     $('.side-menu-fixed .navbar-nav li.active').parents('li').addClass('active');
 }
 
-
 /****************************************************
           javascript
 ****************************************************/
