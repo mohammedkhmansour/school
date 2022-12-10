@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8e56fbd7f887002a9245028921fdaba",
+    "content-hash": "656412e09ab658adfc7f58011216c927",
     "packages": [
         {
             "name": "brick/math",
@@ -2242,6 +2242,211 @@
             "time": "2022-10-28T22:51:32+00:00"
         },
         {
+            "name": "php-flasher/flasher",
+            "version": "v1.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-flasher/flasher.git",
+                "reference": "a0fe150811967874e121b028c949666e2d91c149"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-flasher/flasher/zipball/a0fe150811967874e121b028c949666e2d91c149",
+                "reference": "a0fe150811967874e121b028c949666e2d91c149",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flasher\\Prime\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Younes KHOUBZA",
+                    "email": "younes.khoubza@gmail.com",
+                    "homepage": "https://www.linkedin.com/in/younes-khoubza",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A powerful and flexible flash notification system for PHP",
+            "homepage": "https://php-flasher.io",
+            "keywords": [
+                "Flasher",
+                "alerts",
+                "flash",
+                "laravel",
+                "lumen",
+                "messages",
+                "notifications",
+                "notify",
+                "noty",
+                "notyf",
+                "php",
+                "pnotify",
+                "sweet alert",
+                "symfony",
+                "toastr"
+            ],
+            "support": {
+                "source": "https://github.com/php-flasher/flasher/tree/v1.8.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/yoeunes",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-07T22:10:03+00:00"
+        },
+        {
+            "name": "php-flasher/flasher-laravel",
+            "version": "v1.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-flasher/flasher-laravel.git",
+                "reference": "ac42621953e8472042c6f2bf621a5799a232962b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-flasher/flasher-laravel/zipball/ac42621953e8472042c6f2bf621a5799a232962b",
+                "reference": "ac42621953e8472042c6f2bf621a5799a232962b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^4.0|^5.0|^6.0|^7.0|^8.0|^9.0",
+                "php": ">=5.3",
+                "php-flasher/flasher": "^1.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Flasher\\Laravel\\FlasherServiceProvider"
+                    ],
+                    "aliases": {
+                        "Flasher": "Flasher\\Laravel\\Facade\\Flasher"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "flasher.php"
+                ],
+                "psr-4": {
+                    "Flasher\\Laravel\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Younes KHOUBZA",
+                    "email": "younes.khoubza@gmail.com",
+                    "homepage": "https://www.linkedin.com/in/younes-khoubza",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel package integrating PHPFlasher into Laravel applications",
+            "homepage": "https://php-flasher.io",
+            "keywords": [
+                "Flasher",
+                "alerts",
+                "bundle",
+                "flex",
+                "laravel",
+                "lumen",
+                "messages",
+                "notifications",
+                "notify",
+                "php",
+                "pnotify",
+                "symfony",
+                "toastr",
+                "yoeunes"
+            ],
+            "support": {
+                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.8.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/yoeunes",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-07T22:10:03+00:00"
+        },
+        {
+            "name": "php-flasher/flasher-toastr",
+            "version": "v1.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-flasher/flasher-toastr.git",
+                "reference": "4396869a48cdd8aeeec46c884aae4056e3de6315"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-flasher/flasher-toastr/zipball/4396869a48cdd8aeeec46c884aae4056e3de6315",
+                "reference": "4396869a48cdd8aeeec46c884aae4056e3de6315",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "php-flasher/flasher": "^1.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flasher\\Toastr\\Prime\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Younes KHOUBZA",
+                    "email": "younes.khoubza@gmail.com",
+                    "homepage": "https://www.linkedin.com/in/younes-khoubza",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHPFlasher adapter for Toastr",
+            "homepage": "https://php-flasher.io",
+            "keywords": [
+                "alerts",
+                "laravel",
+                "lumen",
+                "messages",
+                "notifications",
+                "notify",
+                "php",
+                "pnotify",
+                "symfony",
+                "toastr"
+            ],
+            "support": {
+                "source": "https://github.com/php-flasher/flasher-toastr/tree/v1.8.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/yoeunes",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-11-21T20:31:08+00:00"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.9.0",
             "source": {
@@ -2970,6 +3175,147 @@
                 }
             ],
             "time": "2022-11-05T23:03:38+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.13.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "4af8e608184471b5568af6265ebb0ca0025c131a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/4af8e608184471b5568af6265ebb0ca0025c131a",
+                "reference": "4af8e608184471b5568af6265ebb0ca0025c131a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.13.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-11-15T09:10:09+00:00"
+        },
+        {
+            "name": "spatie/laravel-translatable",
+            "version": "6.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-translatable.git",
+                "reference": "b0ee6e06c666dcfb97fb1b4ff141b34e59806f13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-translatable/zipball/b0ee6e06c666dcfb97fb1b4ff141b34e59806f13",
+                "reference": "b0ee6e06c666dcfb97fb1b4ff141b34e59806f13",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0",
+                "illuminate/support": "^9.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.11"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^7.0",
+                "pestphp/pest": "^1.20"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Translatable\\TranslatableServiceProvider"
+                    ]
+                },
+                "aliases": {
+                    "Translatable": "Spatie\\Translatable\\Facades\\Translatable"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Translatable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A trait to make an Eloquent model hold translations",
+            "homepage": "https://github.com/spatie/laravel-translatable",
+            "keywords": [
+                "eloquent",
+                "i8n",
+                "laravel-translatable",
+                "model",
+                "multilingual",
+                "spatie",
+                "translate"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-translatable/tree/6.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-10-21T08:44:08+00:00"
         },
         {
             "name": "symfony/console",
@@ -5513,6 +5859,93 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "yoeunes/toastr",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yoeunes/toastr.git",
+                "reference": "05ac678690d4a5f69dd1cc0a71e4cf9164f2c408"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yoeunes/toastr/zipball/05ac678690d4a5f69dd1cc0a71e4cf9164f2c408",
+                "reference": "05ac678690d4a5f69dd1cc0a71e4cf9164f2c408",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "php-flasher/flasher-laravel": "^1.6",
+                "php-flasher/flasher-toastr": "^1.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Yoeunes\\Toastr\\ToastrServiceProvider"
+                    ],
+                    "aliases": {
+                        "Toastr": "Yoeunes\\Toastr\\Facades\\Toastr"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Yoeunes\\Toastr\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Younes Khoubza",
+                    "email": "younes.khoubza@gmail.com",
+                    "homepage": "https://github.com/yoeunes",
+                    "role": "Developer"
+                }
+            ],
+            "description": "toastr.js flush notifications for Laravel and Lumen",
+            "homepage": "https://github.com/yoeunes/toastr",
+            "keywords": [
+                "alerts",
+                "flush",
+                "flush messages",
+                "flush notifications",
+                "laravel",
+                "laravel 5",
+                "laravel 6",
+                "laravel 7",
+                "laravel flush notifications",
+                "laravel notification",
+                "laravel notify",
+                "laravel toastr",
+                "lumen",
+                "messages",
+                "notification",
+                "php",
+                "toastr",
+                "toastr js",
+                "yoeunes"
+            ],
+            "support": {
+                "docs": "https://github.com/yoeunes/toastr/README.md",
+                "email": "younes.khoubza@gmail.com",
+                "issues": "https://github.com/yoeunes/toastr/issues",
+                "source": "https://github.com/yoeunes/toastr"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/yoeunes",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-10-25T23:44:36+00:00"
         }
     ],
     "packages-dev": [

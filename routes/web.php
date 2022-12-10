@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\GradeController;
+use App\Http\Controllers\Grades\GradeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -15,17 +15,27 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+Route::group(['middleware' => ['guest']], function () {
+
+    Route::get('/', function () {
+        return view('auth.login');
+    });
+
+});
+
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth' ]
     ], function(){
-        Route::get('/', function () {
-            return view('empty');
-        });
 
 
-        Route::resource('grade',GradeController::class);
+
+        Route::resource('Grades',GradeController::class);
+
+        Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 
 
@@ -33,6 +43,4 @@ Route::group(
 
 
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
