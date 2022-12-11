@@ -39,10 +39,10 @@ class GradeController extends Controller
     public function store(StoreGrades $request)
     {
 
-        if (Grade::where('Name->ar', $request->Name)->orWhere('Name->en',$request->Name_en)->exists()) {
+    //     if (Grade::where('Name->ar', $request->Name)->orWhere('Name->en',$request->Name_en)->exists()) {
 
-          return redirect()->back()->withErrors(trans('Grades_trans.exists'));
-      }
+    //       return redirect()->back()->withErrors(trans('Grades_trans.exists'));
+    //   } عدلناها في الفاليديشن ريكويست
 
         try {
             $validated = $request->validated();
