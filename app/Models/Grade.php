@@ -14,4 +14,9 @@ class Grade extends Model
     protected $fillable=['Name','Notes'];
 
     use HasFactory;
+
+    public function Sections()
+    {
+        return $this->hasMany(Section::class, 'grade_id');
+    }
 }

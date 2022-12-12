@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Classroom\ClassroomController;
 use App\Http\Controllers\Grades\GradeController;
+use App\Http\Controllers\Sections\SectionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -41,9 +42,14 @@ Route::group(
 
         Route::post('Filter_Classes', [ClassroomController::class,'Filter_Classes'])->name('Filter_Classes');
 
+
+        Route::resource('Sections',SectionController::class);
+
+        Route::get('/classes/{id}', [SectionController::class,'getclasses']);
+
+
+
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
-
-
 
     });
 

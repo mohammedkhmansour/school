@@ -4,8 +4,8 @@ return [
 
     'Dashboard'=>'Dashboard',
     'Dashboard_page'=>'Dashboard',
-    'Main_title' => 'mohammed abu mansour School Management Program',
-    'Programname' => 'mohammed abu mansour School Management Program',
+    'Main_title' => 'MoraSoft School Management Program',
+    'Programname' => 'MoraSoft School Management Program',
     'change_language'=>'language',
     'Grades'=>'Grades',
     'Grades_list'=>'Grades List',
@@ -15,6 +15,8 @@ return [
     'List_sections'=>'List Sections',
     'students'=>'Students',
     'add_student'=>'Add student',
+    'list_students'=>'list Students',
+    'Students_Promotions'=>'Students Promotions',
     'information_student'=>'Information Students',
     'Students_upgrade'=>'Students Upgrade',
     'Graduate_students'=>'Graduate Students',
@@ -31,5 +33,7 @@ return [
     'Settings'=>'Settings',
     'Users'=>'Users',
     'Copyright' => 'Copyright',
-    'Name_Programer' => 'mohammed khader abu mansour All Rights Reserved'
+    'Name_Programer' => 'SamirGamal MoraSoft All Rights Reserved'
+
+
 ];
