@@ -19,6 +19,8 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 Auth::routes();
 
+Route::view('test','test');
+
 Route::group(['middleware' => ['guest']], function () {
 
     Route::get('/', function () {
