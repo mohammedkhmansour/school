@@ -49,6 +49,9 @@ Route::group(
 
         Route::get('/classes/{id}', [SectionController::class,'getclasses']);
 
+        //livewire form
+        Route::view('add_parent','livewire.show_Form');
+
 
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
