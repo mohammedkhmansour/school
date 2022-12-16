@@ -118,6 +118,13 @@ class SectionController extends Controller
           $Sections->Status = 2;
         }
 
+       // update pivot tABLE
+       if (isset($request->teacher_id)) {
+        $Sections->teachers()->sync($request->teacher_id);
+    } else {
+        $Sections->teachers()->sync(array());
+    }
+
         $Sections->save();
         toastr()->success(trans('messages.Update'));
 
