@@ -24,4 +24,10 @@ class Teacher extends Model
     {
         return $this->belongsTo(Gender::class, 'Gender_id');
     }
+
+    // علاقة المعلمين مع الاقسام
+    public function Sections()
+    {
+        return $this->belongsToMany(Section::class,'teacher_section');
+    }
 }
