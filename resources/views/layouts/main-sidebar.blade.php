@@ -18,7 +18,7 @@
                     <!-- Grades-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Grades-menu">
-                            <div class="pull-left"><i class="fas fa-school"></i><span
+                            <div class="pull-left"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span
                                     class="right-nav-text">{{trans('main_trans.Grades')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -45,7 +45,7 @@
                     <!-- sections-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#sections-menu">
-                            <div class="pull-left"><i class="fas fa-chalkboard"></i></i><span
+                            <div class="pull-left"><i class="fa fa-desktop" aria-hidden="true"></i><span
                                     class="right-nav-text">{{trans('main_trans.sections')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -60,14 +60,14 @@
                     <!-- students-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#students-menu">
-                            <div class="pull-left"><i class="fas fa-user-graduate"></i></i></i><span
+                            <div class="pull-left"><i class="fa fa-users" aria-hidden="true"></i><span
                                     class="right-nav-text">{{trans('main_trans.students')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="students-menu" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{route('Students.create')}}">{{trans('main_trans.add_student')}}</a> </li>
-                            <li> <a href="calendar-list.html">List Calendar</a> </li>
+                            <li> <a href="{{route('Students.index')}}">{{trans('main_trans.list_students')}}</a> </li>
                         </ul>
                     </li>
 
@@ -76,7 +76,7 @@
                     <!-- Teachers-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Teachers-menu">
-                            <div class="pull-left"><i class="fas fa-chalkboard-teacher"></i></i><span
+                            <div class="pull-left"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span
                                     class="right-nav-text">{{trans('main_trans.Teachers')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -90,7 +90,7 @@
                     <!-- Parents-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Parents-menu">
-                            <div class="pull-left"><i class="fas fa-user-tie"></i><span
+                            <div class="pull-left"><i class="fa fa-user" aria-hidden="true"></i><span
                                     class="right-nav-text">{{trans('main_trans.Parents')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -104,7 +104,7 @@
                     <!-- Accounts-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Accounts-menu">
-                            <div class="pull-left"><i class="fas fa-money-bill-wave-alt"></i><span
+                            <div class="pull-left"><i class="fa fa-money" aria-hidden="true"></i><span
                                     class="right-nav-text">{{trans('main_trans.Accounts')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -118,7 +118,7 @@
                     <!-- Attendance-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Attendance-icon">
-                            <div class="pull-left"><i class="fas fa-calendar-alt"></i><span class="right-nav-text">{{trans('main_trans.Attendance')}}</span></div>
+                            <div class="pull-left"><i class="fa fa-calendar" aria-hidden="true"></i><span class="right-nav-text">{{trans('main_trans.Attendance')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -132,7 +132,7 @@
                     <!-- Exams-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Exams-icon">
-                            <div class="pull-left"><i class="fas fa-book-open"></i><span class="right-nav-text">{{trans('main_trans.Exams')}}</span></div>
+                            <div class="pull-left"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="right-nav-text">{{trans('main_trans.Exams')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -147,7 +147,7 @@
                     <!-- library-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#library-icon">
-                            <div class="pull-left"><i class="fas fa-book"></i><span class="right-nav-text">{{trans('main_trans.library')}}</span></div>
+                            <div class="pull-left"><i class="fa fa-book" aria-hidden="true"></i><span class="right-nav-text">{{trans('main_trans.library')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -162,7 +162,7 @@
                     <!-- Onlinec lasses-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Onlineclasses-icon">
-                            <div class="pull-left"><i class="fas fa-video"></i><span class="right-nav-text">{{trans('main_trans.Onlineclasses')}}</span></div>
+                            <div class="pull-left"><i class="fa fa-video-camera" aria-hidden="true"></i><span class="right-nav-text">{{trans('main_trans.Onlineclasses')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -177,7 +177,7 @@
                     <!-- Settings-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Settings-icon">
-                            <div class="pull-left"><i class="fas fa-cogs"></i><span class="right-nav-text">{{trans('main_trans.Settings')}}</span></div>
+                            <div class="pull-left"><i class="fa fa-cogs" aria-hidden="true"></i><span class="right-nav-text">{{trans('main_trans.Settings')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -192,7 +192,7 @@
                     <!-- Users-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Users-icon">
-                            <div class="pull-left"><i class="fas fa-users"></i><span class="right-nav-text">{{trans('main_trans.Users')}}</span></div>
+                            <div class="pull-left"><i class="fa fa-users"></i><span class="right-nav-text">{{trans('main_trans.Users')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
