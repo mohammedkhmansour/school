@@ -47,5 +47,18 @@ class Student extends Model
     {
         return $this->morphMany(Image::class, 'imageable');
     }
+    // علاقة بين الطلاب والجنسيات  لجلب اسم الجنسية  في جدول الجنسيات
 
+    public function Nationality()
+    {
+        return $this->belongsTo(Nationalitie::class, 'nationalitie_id');
+    }
+
+
+    // علاقة بين الطلاب والاباء لجلب اسم الاب في جدول الاباء
+
+    public function myparent()
+    {
+        return $this->belongsTo(MyParent::class, 'parent_id');
+    }
 }
