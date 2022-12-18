@@ -3,10 +3,12 @@
 namespace App\Providers;
 
 use App\Repository\StudentRepository;
-use App\Repository\StudentRepositoryInterface;
 use App\Repository\TeacherRepository;
-use App\Repository\TeacherRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
+use App\Repository\StudentPromotionRepository;
+use App\Repository\StudentRepositoryInterface;
+use App\Repository\TeacherRepositoryInterface;
+use App\Repository\StudentPromotionRepositoryInterface;
 
 class RepoServiceProvider extends ServiceProvider
 {
@@ -25,7 +27,9 @@ class RepoServiceProvider extends ServiceProvider
                 StudentRepositoryInterface::class,
                 StudentRepository::class);
 
-
+                $this->app->bind(
+                    StudentPromotionRepositoryInterface::class,
+                    StudentPromotionRepository::class);
     }
 
     /**
