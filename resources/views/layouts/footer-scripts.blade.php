@@ -55,8 +55,8 @@
                     dataType: "json",
                     success: function (data) {
                         $('select[name="Classroom_id"]').empty();
+                        $('select[name="Classroom_id"]').append('<option selected disabled >{{trans('Parent_trans.Choose')}}...</option>');
                         $.each(data, function (key, value) {
-                            $('select[name="Classroom_id"]').append('<option selected disabled >{{trans('Parent_trans.Choose')}}...</option>');
                             $('select[name="Classroom_id"]').append('<option value="' + key + '">' + value + '</option>');
                         });
                     },
@@ -109,8 +109,8 @@
                     dataType: "json",
                     success: function (data) {
                         $('select[name="Classroom_id_new"]').empty();
+                        $('select[name="Classroom_id_new"]').append('<option selected disabled >{{trans('Parent_trans.Choose')}}...</option>');
                         $.each(data, function (key, value) {
-                            $('select[name="Classroom_id_new"]').append('<option selected disabled >{{trans('Parent_trans.Choose')}}...</option>');
                             $('select[name="Classroom_id_new"]').append('<option value="' + key + '">' + value + '</option>');
                         });
                     },
