@@ -3,6 +3,7 @@
 use App\Http\Controllers\Classroom\ClassroomController;
 use App\Http\Controllers\Grades\GradeController;
 use App\Http\Controllers\Sections\SectionController;
+use App\Http\Controllers\Students\GraduatedController;
 use App\Http\Controllers\Students\PromotionController;
 use App\Http\Controllers\Students\StudentController;
 use App\Http\Controllers\Teachers\TeacherController;
@@ -70,6 +71,7 @@ Route::group(
             //==============================Promotion Students ============================
         Route::resource('Promotion', PromotionController::class);
 
+        Route::resource('Graduated', GraduatedController::class);
 
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
