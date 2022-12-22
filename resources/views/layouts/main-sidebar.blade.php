@@ -118,19 +118,19 @@
                     </li>
 
                     <!-- Accounts-->
+
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Accounts-menu">
-                            <div class="pull-left"><i class="fa fa-money" aria-hidden="true"></i><span
+                            <div class="pull-left"><i class="fa fa-money"></i><span
                                     class="right-nav-text">{{trans('main_trans.Accounts')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Accounts-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="calendar.html">Events Calendar </a> </li>
+                            <li> <a href="{{route('Fees.index')}}">الرسوم الدراسية</a> </li>
                             <li> <a href="calendar-list.html">List Calendar</a> </li>
                         </ul>
                     </li>
-
                     <!-- Attendance-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Attendance-icon">
