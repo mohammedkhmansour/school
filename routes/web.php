@@ -7,6 +7,7 @@ use App\Http\Controllers\Students\FeesController;
 use App\Http\Controllers\Students\FeesInvoicesController;
 use App\Http\Controllers\Students\GraduatedController;
 use App\Http\Controllers\Students\PromotionController;
+use App\Http\Controllers\Students\ReceiptStudentsController;
 use App\Http\Controllers\Students\StudentController;
 use App\Http\Controllers\Teachers\TeacherController;
 use Illuminate\Support\Facades\Auth;
@@ -79,6 +80,7 @@ Route::group(
 
         Route::resource('Fees_Invoices', FeesInvoicesController::class);
 
+        Route::resource('receipt_students', ReceiptStudentsController::class);
 
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');

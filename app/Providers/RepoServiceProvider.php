@@ -8,11 +8,13 @@ use App\Repository\TeacherRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repository\FeeInvoicesRepository;
 use App\Repository\FeesRepositoryInterface;
+use App\Repository\ReceiptStudentsRepository;
 use App\Repository\StudentGraduatedRepository;
 use App\Repository\StudentPromotionRepository;
 use App\Repository\StudentRepositoryInterface;
 use App\Repository\TeacherRepositoryInterface;
 use App\Repository\FeeInvoicesRepositoryInterface;
+use App\Repository\ReceiptStudentsRepositoryInterface;
 use App\Repository\StudentGraduatedRepositoryInterface;
 use App\Repository\StudentPromotionRepositoryInterface;
 
@@ -48,6 +50,10 @@ class RepoServiceProvider extends ServiceProvider
                             $this->app->bind(
                                 FeeInvoicesRepositoryInterface::class,
                                 FeeInvoicesRepository::class);
+
+                                $this->app->bind(
+                                    ReceiptStudentsRepositoryInterface::class,
+                                    ReceiptStudentsRepository::class);
     }
 
     /**
