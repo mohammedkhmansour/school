@@ -4,6 +4,7 @@ use App\Http\Controllers\Classroom\ClassroomController;
 use App\Http\Controllers\Grades\GradeController;
 use App\Http\Controllers\Sections\SectionController;
 use App\Http\Controllers\Students\FeesController;
+use App\Http\Controllers\Students\FeesInvoicesController;
 use App\Http\Controllers\Students\GraduatedController;
 use App\Http\Controllers\Students\PromotionController;
 use App\Http\Controllers\Students\StudentController;
@@ -75,6 +76,9 @@ Route::group(
         Route::resource('Graduated', GraduatedController::class);
 
         Route::resource('Fees',FeesController::class);
+
+        Route::resource('Fees_Invoices', FeesInvoicesController::class);
+
 
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
