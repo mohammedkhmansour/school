@@ -12,6 +12,7 @@ use App\Http\Controllers\Students\ProcessingFeeController;
 use App\Http\Controllers\Students\PromotionController;
 use App\Http\Controllers\Students\ReceiptStudentsController;
 use App\Http\Controllers\Students\StudentController;
+use App\Http\Controllers\Subjects\SubjectController;
 use App\Http\Controllers\Teachers\TeacherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -90,6 +91,12 @@ Route::group(
         Route::resource('Payment_students', PaymentController::class);
 
         Route::resource('Attendance', AttendanceController::class);
+
+            //==============================Subjects============================
+
+        Route::resource('subjects', SubjectController::class);
+
+
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
