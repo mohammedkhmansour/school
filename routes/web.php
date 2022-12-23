@@ -3,6 +3,7 @@
 use App\Http\Controllers\Classroom\ClassroomController;
 use App\Http\Controllers\Exams\ExamController;
 use App\Http\Controllers\Grades\GradeController;
+use App\Http\Controllers\Quizzes\QuizzController;
 use App\Http\Controllers\Sections\SectionController;
 use App\Http\Controllers\Students\AttendanceController;
 use App\Http\Controllers\Students\FeesController;
@@ -97,11 +98,9 @@ Route::group(
 
         Route::resource('subjects', SubjectController::class);
 
-            //==============================Exams============================
+    //==============================Quizzes============================
 
-        Route::resource('Exams', ExamController::class);
-
-
+        Route::resource('Quizzes', QuizzController::class);
 
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
