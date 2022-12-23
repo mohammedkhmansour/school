@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Classroom\ClassroomController;
+use App\Http\Controllers\Exams\ExamController;
 use App\Http\Controllers\Grades\GradeController;
 use App\Http\Controllers\Sections\SectionController;
 use App\Http\Controllers\Students\AttendanceController;
@@ -95,6 +96,11 @@ Route::group(
             //==============================Subjects============================
 
         Route::resource('subjects', SubjectController::class);
+
+            //==============================Exams============================
+
+        Route::resource('Exams', ExamController::class);
+
 
 
 

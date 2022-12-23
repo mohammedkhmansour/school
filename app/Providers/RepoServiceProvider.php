@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Repository\ExamRepository;
 use App\Repository\FeesRepository;
 use App\Repository\PaymentRepository;
 use App\Repository\StudentRepository;
@@ -10,6 +11,7 @@ use App\Repository\TeacherRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repository\AttendanceRepository;
 use App\Repository\FeeInvoicesRepository;
+use App\Repository\ExamRepositoryInterface;
 use App\Repository\FeesRepositoryInterface;
 use App\Repository\ProcessingFeeRepository;
 use App\Repository\ReceiptStudentsRepository;
@@ -78,6 +80,11 @@ class RepoServiceProvider extends ServiceProvider
                                                 $this->app->bind(
                                                     SubjectRepositoryInterface::class,
                                                     SubjectRepository::class);
+
+                                                    $this->app->bind(
+                                                        ExamRepositoryInterface::class,
+                                                        ExamRepository::class);
+
     }
 
     /**
