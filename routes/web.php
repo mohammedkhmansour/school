@@ -3,6 +3,7 @@
 use App\Http\Controllers\Classroom\ClassroomController;
 use App\Http\Controllers\Grades\GradeController;
 use App\Http\Controllers\Sections\SectionController;
+use App\Http\Controllers\Students\AttendanceController;
 use App\Http\Controllers\Students\FeesController;
 use App\Http\Controllers\Students\FeesInvoicesController;
 use App\Http\Controllers\Students\GraduatedController;
@@ -88,6 +89,7 @@ Route::group(
 
         Route::resource('Payment_students', PaymentController::class);
 
+        Route::resource('Attendance', AttendanceController::class);
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
