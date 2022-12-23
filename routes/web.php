@@ -3,6 +3,7 @@
 use App\Http\Controllers\Classroom\ClassroomController;
 use App\Http\Controllers\Exams\ExamController;
 use App\Http\Controllers\Grades\GradeController;
+use App\Http\Controllers\questions\QuestionController;
 use App\Http\Controllers\Quizzes\QuizzController;
 use App\Http\Controllers\Sections\SectionController;
 use App\Http\Controllers\Students\AttendanceController;
@@ -102,6 +103,8 @@ Route::group(
 
         Route::resource('Quizzes', QuizzController::class);
 
+            //==============================questions============================
+        Route::resource('questions', QuestionController::class);
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 

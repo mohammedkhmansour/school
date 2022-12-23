@@ -9,6 +9,7 @@ use App\Repository\PaymentRepository;
 use App\Repository\StudentRepository;
 use App\Repository\SubjectRepository;
 use App\Repository\TeacherRepository;
+use App\Repository\QuestionRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repository\AttendanceRepository;
 use App\Repository\FeeInvoicesRepository;
@@ -23,6 +24,7 @@ use App\Repository\StudentPromotionRepository;
 use App\Repository\StudentRepositoryInterface;
 use App\Repository\SubjectRepositoryInterface;
 use App\Repository\TeacherRepositoryInterface;
+use App\Repository\QuestionRepositoryInterface;
 use App\Repository\AttendanceRepositoryInterface;
 use App\Repository\FeeInvoicesRepositoryInterface;
 use App\Repository\ProcessingFeeRepositoryInterface;
@@ -86,6 +88,10 @@ class RepoServiceProvider extends ServiceProvider
                                                     $this->app->bind(
                                                         QuizzRepositoryInterface::class,
                                                         QuizzRepository::class);
+
+                                                        $this->app->bind(
+                                                            QuestionRepositoryInterface::class,
+                                                            QuestionRepository::class);
 
 
     }
