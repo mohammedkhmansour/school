@@ -10,6 +10,7 @@ use App\Http\Controllers\Students\AttendanceController;
 use App\Http\Controllers\Students\FeesController;
 use App\Http\Controllers\Students\FeesInvoicesController;
 use App\Http\Controllers\Students\GraduatedController;
+use App\Http\Controllers\Students\LibraryController;
 use App\Http\Controllers\Students\PaymentController;
 use App\Http\Controllers\Students\ProcessingFeeController;
 use App\Http\Controllers\Students\PromotionController;
@@ -105,6 +106,11 @@ Route::group(
 
             //==============================questions============================
         Route::resource('questions', QuestionController::class);
+
+           //==============================library============================
+
+        Route::get('download_file/{filename}', [LibraryController::class,'downloadAttachment'])->name('downloadAttachment');
+        Route::resource('library', LibraryController::class);
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
