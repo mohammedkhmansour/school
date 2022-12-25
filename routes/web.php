@@ -6,6 +6,7 @@ use App\Http\Controllers\Grades\GradeController;
 use App\Http\Controllers\questions\QuestionController;
 use App\Http\Controllers\Quizzes\QuizzController;
 use App\Http\Controllers\Sections\SectionController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\Students\AttendanceController;
 use App\Http\Controllers\Students\FeesController;
 use App\Http\Controllers\Students\FeesInvoicesController;
@@ -111,6 +112,9 @@ Route::group(
 
         Route::get('download_file/{filename}', [LibraryController::class,'downloadAttachment'])->name('downloadAttachment');
         Route::resource('library', LibraryController::class);
+
+            //==============================Setting============================
+    Route::resource('settings', SettingController::class);
 
         Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
