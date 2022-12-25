@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Classroom\ClassroomController;
 use App\Http\Controllers\Exams\ExamController;
 use App\Http\Controllers\Grades\GradeController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\questions\QuestionController;
 use App\Http\Controllers\Quizzes\QuizzController;
 use App\Http\Controllers\Sections\SectionController;
@@ -33,23 +35,34 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+// Auth::routes();
 
 Route::view('test','test');
 
-Route::group(['middleware' => ['guest']], function () {
+// Route::group(['middleware' => ['guest']], function () {
 
-    Route::get('/', function () {
-        return view('auth.login');
-    });
+//     Route::get('/', function () {
+//         return view('auth.login');
+//     });
 
-});
+// });
+Route::get('/', [HomeController::class,'index'])->name('selection');
+
+
+    Route::get('/login/{type}',[LoginController::class,'loginForm'])->middleware('guest')->name('login.show');
+
+    Route::post('/login',[LoginController::class,'login'])->name('login');
+
+    Route::get('/logout/{type}', [LoginController::class,'logout'])->name('logout');
+
 
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth' ]
     ], function(){
+
+        Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 
 
 
@@ -116,7 +129,6 @@ Route::group(
             //==============================Setting============================
     Route::resource('settings', SettingController::class);
 
-        Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
     });
 
