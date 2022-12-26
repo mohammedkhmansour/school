@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Teachers\dashboard\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Teacher;
@@ -30,5 +31,8 @@ Route::group(
 
         return view('pages.Teachers.dashboard.dashboard',$data);
     });
+
+        //==============================students============================
+     Route::get('student',[StudentController::class,'index'])->name('student.index');
 
 });
