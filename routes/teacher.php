@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Teachers\dashboard\ProfileController;
 use App\Http\Controllers\Teachers\dashboard\QuestionController;
 use App\Http\Controllers\Teachers\dashboard\QuizzController;
 use App\Http\Controllers\Teachers\dashboard\StudentController;
@@ -48,5 +49,8 @@ Route::group(
     Route::resource('quizzes', QuizzController::class);
 
     Route::resource('questions', QuestionController::class);
+
+    Route::get('profile', [ProfileController::class,'index'])->name('profile.show');
+    Route::post('profile/{id}', [ProfileController::class,'update'])->name('profile.update');
 
 });

@@ -28,6 +28,10 @@ class LoginController extends Controller
            return $this->redirect($request);
         }
 
+        else{
+            return redirect()->back()->with('message', 'يوجد خطا في كلمة المرور او اسم المستخدم');
+        }
+
     }
 
     public function logout(Request $request,$type)

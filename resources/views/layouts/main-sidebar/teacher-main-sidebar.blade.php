@@ -34,7 +34,7 @@
             </a>
             <ul id="sections-menu" class="collapse" data-parent="#sidebarnav">
                 <li><a href="{{route('quizzes.index')}}">قائمة الاختبارات</a></li>
-                <li><a href="{{route('questions.index')}}">قائمة الاسئلة</a></li>
+                <li><a href="">قائمة الاسئلة</a></li>
             </ul>
 
         </li>
@@ -71,8 +71,8 @@
 
         <!-- الملف الشخصي-->
         <li>
-            <a href=""><i class="fas fa-id-card-alt"></i><span
-                    class="right-nav-text">الملف الشخصي</span></a>
+            <a href="{{route('profile.show')}}"><i class="fas fa-id-card-alt"></i><span
+                    class="">الملف الشخصي</span></a>
         </li>
 
     </ul>
