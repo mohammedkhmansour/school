@@ -54,15 +54,15 @@ class StudentController extends Controller
         return $this->Student->Delete_Student($request);
     }
 
-    public function Get_classrooms($id)
-    {
-       return $this->Student->Get_classrooms($id);
-    }
+    // public function Get_classrooms($id)
+    // {
+    //    return $this->Student->Get_classrooms($id);
+    // }
 
-    public function Get_Sections($id)
-    {
-        return $this->Student->Get_Sections($id);
-    }
+    // public function Get_Sections($id)
+    // {
+    //     return $this->Student->Get_Sections($id);
+    // }
 
     public function Upload_attachment(Request $request)
     {

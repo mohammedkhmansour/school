@@ -42,8 +42,8 @@ Route::group(
     Route::get('attendance_report',[StudentController::class,'attendanceReport'])->name('attendance.report');
     Route::post('attendance_report',[StudentController::class,'attendanceSearch'])->name('attendance.search');
 
-    Route::get('/Get_classrooms/{id}',[QuizzController::class,'getClassrooms'])->name('attendance.search');
-    Route::get('/Get_Sections/{id}',[QuizzController::class,'Get_Sections'])->name('attendance.search');
+    // Route::get('/Get_classrooms/{id}',[QuizzController::class,'getClassrooms'])->name('attendance.search');
+    // Route::get('/Get_Sections/{id}',[QuizzController::class,'Get_Sections'])->name('attendance.search');
 
     Route::resource('quizzes', QuizzController::class);
 
