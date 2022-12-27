@@ -12,6 +12,12 @@ use Illuminate\Http\Request;
 
 class QuizzController extends Controller
 {
+    // public $teacher_id;
+    // public function __construct()
+    // {
+    //     $this->teacher_id = auth()->user()->id;
+    // } ممكن استخدم كونستركتور بدل من انو اكرر هاد الكود
+
     public function index()
     {
         $quizzes = Quizze::where('teacher_id',auth()->user()->id)->get();
