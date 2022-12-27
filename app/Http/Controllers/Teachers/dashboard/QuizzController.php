@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Teachers\dashboard;
 
-use App\Http\Controllers\Controller;
-use App\Models\Classroom;
 use App\Models\Grade;
 use App\Models\Quizze;
 use App\Models\Section;
 use App\Models\Subject;
+use App\Models\Question;
+use App\Models\Classroom;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class QuizzController extends Controller
 {
@@ -51,7 +52,12 @@ class QuizzController extends Controller
         }
     }
 
-
+    public function show($id)
+    {
+        $questions = Question::where('quizze_id',$id)->get();
+        $quizz = Quizze::findorFail($id);
+        return view('pages.Teachers.dashboard.Questions.index',compact('questions','quizz'));
+    }
 
     public function edit($id)
     {

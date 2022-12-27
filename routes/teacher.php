@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Teachers\dashboard\QuestionController;
 use App\Http\Controllers\Teachers\dashboard\QuizzController;
 use App\Http\Controllers\Teachers\dashboard\StudentController;
 use Illuminate\Http\Request;
@@ -45,5 +46,7 @@ Route::group(
     Route::get('/Get_Sections/{id}',[QuizzController::class,'Get_Sections'])->name('attendance.search');
 
     Route::resource('quizzes', QuizzController::class);
+
+    Route::resource('questions', QuestionController::class);
 
 });
