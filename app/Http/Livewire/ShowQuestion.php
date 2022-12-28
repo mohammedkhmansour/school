@@ -41,7 +41,7 @@ class ShowQuestion extends Component
                 $stuDegree->score = 0;
                 $stuDegree->abuse = '1';
                 $stuDegree->save();
-                toastr()->error('تم إلغاء الاختبار لإكتشاف تلاعب بالنظام');
+                toastr()->error('تم إلغاء الاختبار لإكتشاف تلاعب بالنظام');// 63 هاد الشرط في درس
                 return redirect('student_exams');
             } else {
 
