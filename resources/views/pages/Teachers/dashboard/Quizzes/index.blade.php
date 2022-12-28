@@ -59,7 +59,7 @@
                                                        class="btn btn-warning btn-sm" title="عرض الاسئلة" role="button" aria-pressed="true"><i
                                                             class="fa fa-binoculars"></i></a>
 
-                                                    <a href=""
+                                                    <a href="{{route('student.quizze',$quizze->id)}}"
                                                        class="btn btn-primary btn-sm" title="عرض الطلاب المختبرين" role="button" aria-pressed="true"><i
                                                             class="fa fa-street-view"></i></a>
 
