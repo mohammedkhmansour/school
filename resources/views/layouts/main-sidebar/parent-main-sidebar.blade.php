@@ -2,7 +2,7 @@
     <ul class="nav navbar-nav side-menu" id="sidebarnav">
         <!-- menu item Dashboard-->
         <li>
-            <a href="{{ route('dashboard.Students') }}">
+            <a href="{{route('dashboard.parents')}}">
                 <div class="pull-left"><i class="ti-home"></i><span
                         class="right-nav-text">{{trans('main_trans.Dashboard')}}</span>
                 </div>
@@ -15,7 +15,7 @@
 
         <!-- الامتحانات-->
         <li>
-            <a href="{{route('student_exams.index')}}"><i class="fas fa-book-open"></i><span
+            <a href="{{route('sons.index')}}"><i class="fas fa-book-open"></i><span
                     class="right-nav-text">الابناء</span></a>
         </li>
 
